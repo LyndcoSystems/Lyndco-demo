@@ -16,6 +16,8 @@
       --line:rgba(255,255,255,.10);
       --accent:#55d6be;
       --accent2:#7dd3fc;
+      --gold:#d6a84b;
+      --gold2:#e3bb67;
       --shadow:0 18px 50px rgba(0,0,0,.32);
     }
     *{box-sizing:border-box}
@@ -23,32 +25,71 @@
       radial-gradient(circle at 15% 10%,rgba(85,214,190,.14),transparent 28%),
       radial-gradient(circle at 85% 0%,rgba(125,211,252,.12),transparent 30%),
       var(--bg);color:var(--text)}
-    body{display:flex;align-items:center;justify-content:center;padding:24px}
+    body{display:flex;align-items:center;justify-content:center;padding:16px}
     .shell{width:min(100%,460px)}
-    .brand{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:20px}
-    .mark{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;color:#06231f;font-weight:900;box-shadow:0 10px 26px rgba(85,214,190,.22)}
+    .brand{display:flex;align-items:center;justify-content:center;gap:11px;margin-bottom:12px}
+    .mark{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;color:#06231f;font-weight:900;box-shadow:0 10px 26px rgba(85,214,190,.22)}
     .brand-text{line-height:1}
-    .brand-name{font-weight:800;letter-spacing:.06em;font-size:15px}
-    .brand-sub{margin-top:6px;color:var(--muted);font-size:12px;letter-spacing:.11em;text-transform:uppercase}
-    .card{background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:26px;padding:28px 22px 22px;box-shadow:var(--shadow);backdrop-filter:blur(12px)}
-    h1{font-size:34px;line-height:1.05;margin:0 0 12px;letter-spacing:-.035em;text-align:center}
-    .lead{margin:0 auto 24px;text-align:center;color:var(--muted);font-size:15px;line-height:1.55;max-width:35ch}
-    .actions{display:grid;gap:12px}
-    button{width:100%;border:1px solid var(--line);background:var(--panel);color:var(--text);padding:17px 16px;border-radius:16px;text-align:left;display:flex;align-items:center;gap:14px;font-size:16px;font-weight:700;cursor:pointer;transition:.18s ease;box-shadow:0 6px 16px rgba(0,0,0,.12)}
+    .brand-name{font-weight:800;letter-spacing:.06em;font-size:14px}
+    .brand-sub{margin-top:5px;color:var(--muted);font-size:11px;letter-spacing:.11em;text-transform:uppercase}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:24px;padding:20px 18px 18px;box-shadow:var(--shadow);backdrop-filter:blur(12px)}
+    h1{font-size:29px;line-height:1.02;margin:0 0 8px;letter-spacing:-.035em;text-align:center}
+    .lead{margin:0 auto 16px;text-align:center;color:var(--muted);font-size:13px;line-height:1.42;max-width:38ch}
+    .actions{display:grid;gap:8px}
+    button{width:100%;border:1px solid var(--line);background:var(--panel);color:var(--text);padding:11px 12px;border-radius:14px;text-align:left;display:flex;align-items:center;gap:11px;font-size:14px;font-weight:700;cursor:pointer;transition:.18s ease;box-shadow:0 5px 14px rgba(0,0,0,.12)}
     button:hover,button:focus{transform:translateY(-1px);background:var(--panel2);outline:none;border-color:rgba(125,211,252,.35)}
-    .icon{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,.06);font-size:20px;flex:0 0 auto}
-    .btn-copy{display:flex;flex-direction:column;gap:3px}
-    .btn-copy small{font-size:12px;color:var(--muted);font-weight:500}
-    .arrow{margin-left:auto;color:var(--muted);font-size:20px}
-    .note{margin-top:18px;padding:14px 15px;border-radius:14px;background:rgba(85,214,190,.07);border:1px solid rgba(85,214,190,.17);color:#c9fff4;font-size:12px;line-height:1.5;text-align:center}
-    .footer{text-align:center;color:#738097;font-size:11px;margin-top:16px}
-    .modal{position:fixed;inset:0;background:rgba(2,6,23,.74);display:none;align-items:center;justify-content:center;padding:24px}
+    .icon{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;background:rgba(255,255,255,.06);font-size:17px;flex:0 0 auto}
+    .btn-copy{display:flex;flex-direction:column;gap:2px}
+    .btn-copy small{font-size:10.5px;color:var(--muted);font-weight:500}
+    .arrow{margin-left:auto;color:var(--muted);font-size:18px}
+    .cta{margin-top:11px;background:linear-gradient(135deg,var(--gold),var(--gold2));border-color:rgba(255,255,255,.12);color:#241a07;justify-content:center;text-align:center;font-size:15px;padding:13px 14px;box-shadow:0 9px 22px rgba(214,168,75,.18)}
+    .cta:hover,.cta:focus{background:linear-gradient(135deg,#dfb65d,#edc97b);border-color:rgba(255,255,255,.2)}
+    .cta .icon{background:rgba(36,26,7,.09);color:#241a07}
+    .cta .arrow{color:rgba(36,26,7,.55)}
+    .note{margin:10px 6px 0;padding:8px 10px;color:#8b97aa;font-size:10.5px;line-height:1.35;text-align:center}
+    .footer{text-align:center;color:#66738a;font-size:10.5px;margin-top:6px}
+    .modal{position:fixed;inset:0;background:rgba(2,6,23,.78);display:none;align-items:center;justify-content:center;padding:18px;z-index:50}
     .modal.show{display:flex}
-    .modal-box{width:min(100%,380px);background:#111a2b;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow)}
-    .modal-box h2{margin:0 0 8px;font-size:20px}
-    .modal-box p{margin:0 0 18px;color:var(--muted);line-height:1.5;font-size:14px}
+    .modal-box{width:min(100%,390px);background:#111a2b;border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow);max-height:92vh;overflow:auto}
+    .modal-box h2{margin:0 0 7px;font-size:20px}
+    .modal-box p{margin:0 0 16px;color:var(--muted);line-height:1.45;font-size:13px}
     .close{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#05201d;text-align:center;justify-content:center}
-    @media (max-width:420px){h1{font-size:30px}.card{padding:24px 18px 18px}body{padding:16px}}
+    .form-grid{display:grid;gap:11px}
+    label{display:grid;gap:5px;color:#dce5f2;font-size:12px;font-weight:700}
+    input{width:100%;border:1px solid var(--line);background:#0c1423;color:var(--text);border-radius:12px;padding:12px 13px;font:inherit;font-size:14px;outline:none}
+    input:focus{border-color:rgba(125,211,252,.55);box-shadow:0 0 0 3px rgba(125,211,252,.08)}
+    .submit{margin-top:3px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#241a07;text-align:center;justify-content:center}
+    .secondary{margin-top:8px;background:transparent;justify-content:center;text-align:center;color:var(--muted)}
+    .status{display:none;margin-top:12px;padding:10px 12px;border-radius:12px;font-size:12px;line-height:1.4}
+    .status.show{display:block}
+    .status.ok{background:rgba(85,214,190,.08);border:1px solid rgba(85,214,190,.2);color:#c9fff4}
+    .status.err{background:rgba(248,113,113,.08);border:1px solid rgba(248,113,113,.2);color:#fecaca}
+    .hp{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;overflow:hidden!important}
+    @media (max-width:420px){
+      body{padding:12px}
+      h1{font-size:27px}
+      .card{padding:17px 15px 15px}
+      .brand{margin-bottom:9px}
+      .lead{margin-bottom:12px}
+      .actions{gap:7px}
+      button{padding:10px 11px}
+      .cta{padding:12px}
+    }
+    @media (max-height:720px){
+      body{align-items:flex-start;padding-top:8px}
+      .brand{margin-bottom:7px}
+      .mark{width:34px;height:34px}
+      h1{font-size:24px;margin-bottom:6px}
+      .lead{font-size:12px;margin-bottom:10px}
+      .card{padding:14px 14px 13px}
+      .actions{gap:6px}
+      button{padding:8px 10px}
+      .icon{width:28px;height:28px;font-size:15px}
+      .btn-copy small{font-size:9.5px}
+      .cta{margin-top:8px;padding:10px}
+      .note{margin-top:6px;padding:5px 8px}
+      .footer{margin-top:3px}
+    }
   </style>
 </head>
 <body>
@@ -66,67 +107,169 @@
       <p class="lead">A simple NFC experience that turns a physical card into an easy route for customers to review, book, pay or get in touch.</p>
 
       <div class="actions">
-        <button data-title="Leave a review" data-copy="In a live setup, this would open the client's Google review screen directly.">
+        <button type="button" data-demo-title="Leave a review" data-demo-copy="In a live setup, this would open the client's Google review screen directly.">
           <span class="icon">★</span>
           <span class="btn-copy">Leave a review<small>Build trust with genuine customer feedback</small></span>
           <span class="arrow">›</span>
         </button>
 
-        <button data-title="Book / request work" data-copy="In a live setup, this could open a booking calendar, quote request or service enquiry form.">
+        <button type="button" data-demo-title="Book / request work" data-demo-copy="In a live setup, this could open a booking calendar, quote request or service enquiry form.">
           <span class="icon">◷</span>
           <span class="btn-copy">Book / request work<small>Make the next job easier to arrange</small></span>
           <span class="arrow">›</span>
         </button>
 
-        <button data-title="Pay an invoice" data-copy="In a live setup, this could connect to a secure payment or invoice portal such as Stripe.">
+        <button type="button" data-demo-title="Pay an invoice" data-demo-copy="In a live setup, this could connect to a secure payment or invoice portal such as Stripe.">
           <span class="icon">£</span>
           <span class="btn-copy">Pay an invoice<small>Give customers a quick route to payment</small></span>
           <span class="arrow">›</span>
         </button>
 
-        <button data-title="Contact us" data-copy="In a live setup, this could offer phone, text, WhatsApp, email or a contact form.">
+        <button type="button" data-demo-title="Contact us" data-demo-copy="In a live setup, this could offer phone, text, WhatsApp, email or a contact form.">
           <span class="icon">✦</span>
           <span class="btn-copy">Contact us<small>Keep communication one tap away</small></span>
           <span class="arrow">›</span>
         </button>
       </div>
 
-      <div class="note">Demo only — these buttons illustrate how a live Lyndco setup could work for a client.</div>
+      <button type="button" class="cta" id="openInterest">
+        <span class="icon">✓</span>
+        <span>I'd like this for my business</span>
+        <span class="arrow">›</span>
+      </button>
     </section>
 
+    <div class="note">Demo only — the four feature buttons illustrate how a live Lyndco setup could work for a client.</div>
     <div class="footer">Powered by Lyndco Systems</div>
   </main>
 
-  <div class="modal" id="modal" aria-hidden="true">
+  <div class="modal" id="demoModal" aria-hidden="true">
     <div class="modal-box">
-      <h2 id="modalTitle">Demo feature</h2>
-      <p id="modalText"></p>
-      <button class="close" id="closeModal">Close demo</button>
+      <h2 id="demoTitle">Demo feature</h2>
+      <p id="demoText"></p>
+      <button type="button" class="close" id="closeDemo">Close demo</button>
+    </div>
+  </div>
+
+  <div class="modal" id="interestModal" aria-hidden="true">
+    <div class="modal-box">
+      <h2>Register your interest</h2>
+      <p>Leave your details and Lyndco Systems will get in touch about setting this up for your business.</p>
+
+      <form id="interestForm" action="https://formspree.io/f/mljdyknv" method="POST">
+        <input type="hidden" name="_subject" value="New Lyndco Systems demo enquiry">
+        <div class="hp" aria-hidden="true">
+          <label>Leave this field empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
+        </div>
+
+        <div class="form-grid">
+          <label>
+            Full Name
+            <input type="text" name="Full Name" autocomplete="name" required>
+          </label>
+          <label>
+            Company Name
+            <input type="text" name="Company Name" autocomplete="organization" required>
+          </label>
+          <label>
+            Mobile Number
+            <input type="tel" name="Mobile Number" autocomplete="tel" required>
+          </label>
+          <label>
+            Email
+            <input type="email" name="Email" autocomplete="email" required>
+          </label>
+
+          <button type="submit" class="submit" id="submitInterest">Register My Interest</button>
+        </div>
+
+        <div class="status ok" id="successMessage">Thanks — your details have been sent. Lyndco Systems will be in touch.</div>
+        <div class="status err" id="errorMessage">That didn't send. Please try again in a moment.</div>
+      </form>
+
+      <button type="button" class="secondary" id="closeInterest">Close</button>
     </div>
   </div>
 
   <script>
-    const modal = document.getElementById('modal');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalText = document.getElementById('modalText');
-    const closeModal = document.getElementById('closeModal');
+    const demoModal = document.getElementById('demoModal');
+    const demoTitle = document.getElementById('demoTitle');
+    const demoText = document.getElementById('demoText');
+    const closeDemoBtn = document.getElementById('closeDemo');
 
-    document.querySelectorAll('[data-title]').forEach(btn => {
+    document.querySelectorAll('[data-demo-title]').forEach(btn => {
       btn.addEventListener('click', () => {
-        modalTitle.textContent = btn.dataset.title;
-        modalText.textContent = btn.dataset.copy;
-        modal.classList.add('show');
-        modal.setAttribute('aria-hidden', 'false');
+        demoTitle.textContent = btn.dataset.demoTitle;
+        demoText.textContent = btn.dataset.demoCopy;
+        demoModal.classList.add('show');
+        demoModal.setAttribute('aria-hidden', 'false');
       });
     });
 
     function closeDemo(){
-      modal.classList.remove('show');
-      modal.setAttribute('aria-hidden', 'true');
+      demoModal.classList.remove('show');
+      demoModal.setAttribute('aria-hidden', 'true');
     }
-    closeModal.addEventListener('click', closeDemo);
-    modal.addEventListener('click', e => { if(e.target === modal) closeDemo(); });
-    document.addEventListener('keydown', e => { if(e.key === 'Escape') closeDemo(); });
+
+    closeDemoBtn.addEventListener('click', closeDemo);
+    demoModal.addEventListener('click', e => { if(e.target === demoModal) closeDemo(); });
+
+    const interestModal = document.getElementById('interestModal');
+    const openInterest = document.getElementById('openInterest');
+    const closeInterest = document.getElementById('closeInterest');
+    const form = document.getElementById('interestForm');
+    const submitBtn = document.getElementById('submitInterest');
+    const successMessage = document.getElementById('successMessage');
+    const errorMessage = document.getElementById('errorMessage');
+
+    openInterest.addEventListener('click', () => {
+      interestModal.classList.add('show');
+      interestModal.setAttribute('aria-hidden', 'false');
+      setTimeout(() => interestModal.querySelector('input[name="Full Name"]').focus(), 50);
+    });
+
+    function closeInterestModal(){
+      interestModal.classList.remove('show');
+      interestModal.setAttribute('aria-hidden', 'true');
+    }
+
+    closeInterest.addEventListener('click', closeInterestModal);
+    interestModal.addEventListener('click', e => { if(e.target === interestModal) closeInterestModal(); });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      successMessage.classList.remove('show');
+      errorMessage.classList.remove('show');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          form.reset();
+          successMessage.classList.add('show');
+          submitBtn.textContent = 'Sent';
+        } else {
+          throw new Error('Form submission failed');
+        }
+      } catch (err) {
+        errorMessage.classList.add('show');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Register My Interest';
+      }
+    });
+
+    document.addEventListener('keydown', e => {
+      if(e.key === 'Escape'){
+        closeDemo();
+        closeInterestModal();
+      }
+    });
   </script>
 </body>
 </html>
