@@ -11,6 +11,12 @@ document.querySelectorAll(".pack").forEach(b=>b.addEventListener("click",()=>{
 }));
 document.querySelector('.pack[data-pack="50"]').classList.add("selected");
 function val(id){return $(id).value.trim()}
+function normaliseWebsite(v){
+ const s=String(v||"").trim();
+ if(!s)return "";
+ if(/^https?:\/\//i.test(s))return s;
+ return "https://"+s.replace(/^\/+/, "");
+}
 function escapeHtml(s){return String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[m]))}
 function validate(){
  error.classList.add("hidden");
@@ -24,7 +30,7 @@ $("reviewBtn").addEventListener("click",()=>{
  const e=validate();if(e){showError(e);return}
  const lines=[
   ["Bundle",selected+" stickers — £"+prices[selected]+" + VAT"],
-  ["Business Name",val("business")],["Website",val("website")||"—"],["Landline",val("landline")||"—"],["Emergency Contact",val("emergency")||"—"],["WhatsApp",val("whatsapp")||"—"],["Email",val("email")],
+  ["Business Name",val("business")],["Website",normaliseWebsite(val("website"))||"—"],["Landline",val("landline")||"—"],["Emergency Contact",val("emergency")||"—"],["WhatsApp",val("whatsapp")||"—"],["Email",val("email")],
   ["Delivery",[val("address1"),val("address2"),val("town"),val("postcode")].filter(Boolean).join(", ")]
  ];
  $("reviewBox").innerHTML=lines.map(x=>'<div class="reviewLine"><span>'+escapeHtml(x[0])+'</span><span>'+escapeHtml(x[1])+'</span></div>').join("");
@@ -33,7 +39,7 @@ $("reviewBtn").addEventListener("click",()=>{
 $("editBtn").addEventListener("click",()=>{reviewStep.classList.add("hidden");formStep.classList.remove("hidden")});
 $("placeBtn").addEventListener("click",async()=>{
  const btn=$("placeBtn");btn.disabled=true;btn.textContent="Creating order…";error.classList.add("hidden");
- const body={pack_size:selected,business_name:val("business"),website:val("website"),landline:val("landline"),emergency_phone:val("emergency"),whatsapp:val("whatsapp"),email:val("email"),email_confirm:val("email2"),address1:val("address1"),address2:val("address2"),town:val("town"),postcode:val("postcode")};
+ const body={pack_size:selected,business_name:val("business"),website:normaliseWebsite(val("website")),landline:val("landline"),emergency_phone:val("emergency"),whatsapp:val("whatsapp"),email:val("email"),email_confirm:val("email2"),address1:val("address1"),address2:val("address2"),town:val("town"),postcode:val("postcode")};
  try{
   const r=await fetch(API,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)});
   const d=await r.json();if(!r.ok)throw new Error(d.error||"Could not place order");
